@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F1C2B"
+    tools:context=".SettingsFragment">
+
+    <!-- Top section: progress and AI status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_angle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Angle 1 of 5"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="6dp"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="20"
+            android:progressTint="#00E5A0"
+            android:indeterminate="false"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/tv_ai_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI Active"
+            android:textColor="#00E5A0"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Center Frame for camera and overlay -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Grid Frame -->
+        <FrameLayout
+            android:id="@+id/frame_overlay"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="#1AFFFFFF">
+
+            <!-- Vertical Grid Lines -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="#33FFFFFF" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="100dp"
+                android:background="#33FFFFFF" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="100dp"
+                android:background="#33FFFFFF" />
+
+            <!-- Horizontal Grid Lines -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="#33FFFFFF" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:background="#33FFFFFF" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="100dp"
+                android:background="#33FFFFFF" />
+        </FrameLayout>
+
+        <!-- Detected Species Labels -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_cod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cod 94%"
+                android:textColor="#00E5A0"
+                android:textSize="14sp"
+                android:padding="6dp"
+                android:background="#1AFFFFFF"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tv_salmon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salmon 94%"
+                android:textColor="#00E5A0"
+                android:textSize="14sp"
+                android:padding="6dp"
+                android:background="#1AFFFFFF" />
+        </LinearLayout>
+
+        <!-- Center Info Box -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Position catch in frame"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Include ruler or reference object for accurate sizing"
+                android:textColor="#A0FFFFFF"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Capture Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="48dp">
+
+        <View
+            android:id="@+id/btn_capture"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#FFFFFF"
+            android:elevation="6dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_species_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 species detected"
+            android:textColor="#00E5A0"
+            android:textSize="14sp"
+            android:gravity="center" />
+    </LinearLayout>
+
+</FrameLayout>
