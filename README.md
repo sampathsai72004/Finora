@@ -122,28 +122,5 @@ Finora/
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
-
----
-
-## 🤝 Contributors
-
-- **Project Lead:** [Your Name](https://github.com/yourusername)  
-- **AI Research & Model Training:** [Your Name / Team]  
-- **Android Development:** [Your Name / Team]  
-- **UI/UX Design:** [Your Name / Team]
-
----
-
-## 💬 Contact
-
-📧 Email: yourname@example.com  
-🌐 Website: [yourwebsite.com](https://yourwebsite.com)  
-🐙 GitHub: [github.com/yourusername/finora](https://github.com/yourusername/finora)
-
----
-
 > 🌊 *Finora — Empowering fishermen with AI-driven traceability, transparency, and trust.*
 
