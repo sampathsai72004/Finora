@@ -68,5 +68,4 @@ It brings **digital proof, fair pricing, and traceability** right to the docks a
 
 ---
 
-## 🧩 System Flow
 
